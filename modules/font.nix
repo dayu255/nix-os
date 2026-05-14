@@ -9,7 +9,7 @@
         noto-fonts-color-emoji
         terminus_font
         cantarell-fonts
-        fira-code
+        nerd-fonts.fira-code
       ]
     );
     fontDir.enable = true;
