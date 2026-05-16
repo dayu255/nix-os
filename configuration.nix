@@ -71,6 +71,23 @@
     ];
   };
 
+  # Nvidia
+  hardware.graphics.enable = true;
+  services.xserver.videoDrivers = [
+    "nvidia"
+  ];
+  hardware.nvidia = {
+    package = config.boot.kernelPackages.nvidiaPackages.stable;
+    nvidiaSettings = true;
+    modesetting.enable = true;
+    open = true;
+    prime = {
+      offload.enable = true;
+      intelBusId = "PCI:0@0:2:0";
+      nvidiaBusId = "PCI:2@0:0:0";
+    };
+  };
+
   # Enable the KDE Plasma Desktop Environment.
   services.displayManager.sddm.enable = true;
   services.desktopManager.plasma6.enable = true;
