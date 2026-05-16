@@ -80,9 +80,12 @@
     package = config.boot.kernelPackages.nvidiaPackages.stable;
     nvidiaSettings = true;
     modesetting.enable = true;
+    powerManagement.enable=true;
+    powerManagement.finegrained = true;
     open = true;
     prime = {
       offload.enable = true;
+      offload.enableOffloadCmd = true;
       intelBusId = "PCI:0@0:2:0";
       nvidiaBusId = "PCI:2@0:0:0";
     };
