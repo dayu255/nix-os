@@ -145,6 +145,8 @@
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
+    stdenv.cc.cc.lib
+    gccNGPackages_15.libstdcxx
     vim
     git
     wget
@@ -152,6 +154,12 @@
     opensc
     docker
   ];
+
+  programs.nix-ld = {
+    enable = true;
+    libraries = with pkgs; [
+    ];
+  };
 
   programs.zsh.enable = true;
 
