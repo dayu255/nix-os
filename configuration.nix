@@ -62,13 +62,12 @@
 
   # inputMethod
   i18n.inputMethod = {
-    type = "fcitx5";
     enable = true;
+    type = "fcitx5";
     # fcitx5.plasma6Support = true;
     fcitx5.waylandFrontend = true;
     fcitx5.addons = with pkgs;[
       fcitx5-mozc
-      fcitx5-gtk
     ];
   };
 
@@ -130,7 +129,7 @@
   users.users.dayu = {
     isNormalUser = true;
     description = "dayu";
-    extraGroups = [ "networkmanager" "wheel" ];
+    extraGroups = [ "networkmanager" "wheel" "docker" ];
     packages = with pkgs; [
       kdePackages.kate
     ];
@@ -154,6 +153,8 @@
     ccid
     opensc
     docker
+    file
+    busybox
   ];
 
   # Docker deamon enable
