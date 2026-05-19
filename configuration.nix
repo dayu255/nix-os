@@ -156,6 +156,9 @@
     docker
   ];
 
+  # Docker deamon enable
+  virtualisation.docker.enable = true;
+
   programs.nix-ld = {
     enable = true;
     libraries = with pkgs; [
