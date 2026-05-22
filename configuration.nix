@@ -136,6 +136,8 @@
     shell = pkgs.zsh;
   };
 
+  nix.settings.trusted-users = [ "root" "dayu" ];
+
   # Install firefox.
   programs.firefox.enable = true;
 
