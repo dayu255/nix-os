@@ -10,6 +10,7 @@
         terminus_font
         cantarell-fonts
         nerd-fonts.fira-code
+        hackgen-nf-font
       ]
     );
     fontDir.enable = true;

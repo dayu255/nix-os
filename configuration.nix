@@ -147,8 +147,6 @@
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
-    stdenv.cc.cc.lib
-    gccNGPackages_15.libstdcxx
     vim
     git
     wget
@@ -165,6 +163,9 @@
   programs.nix-ld = {
     enable = true;
     libraries = with pkgs; [
+      stdenv.cc.cc.lib
+      zlib
+      openssl
     ];
   };
 
